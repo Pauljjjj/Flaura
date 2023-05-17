@@ -1,0 +1,243 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+}
+
+nav ul li{
+    float: left;
+    text-align: center;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: green;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    font-family: cursive;
+}
+
+nav a:hover{
+    color: green;
+    border-color: green;
+}
+
+.sous{
+    display: none;
+    box-shadow: opx 1px 2px #CCC;
+    background-color: lime;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous a:hover{
+    border-bottom: none;
+    background-color: green;
+    color: white;
+    border-color: black;
+}
+
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul li{
+    position: relative;
+    width: 217px;
+}
+
+.bg {
+    background-color: white;
+    height: 550px;
+}
+
+.bg-image {
+    background-image:url("images/liane.png");
+}
+
+body {
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+    margin-top: 100px;
+}
+  
+.slider img {
+    max-width: 100%;
+    display: none;
+}
+
+img.active {
+    display: block;
+    animation: fade 0.8s;
+    z-index: 1;
+    width: 500px;
+    height: 600px;
+    border-radius: 30px;
+    border: 1rem solid;
+    border-color: #b0f2b6;
+}
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 16px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.flaura{
+    margin-left: 575px;
+    margin-top: 100px;
+}
+
+.aa:hover {
+    color: red;
+}
+
+.aa{
+    color: blue;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    background-color: white;
+    margin-bottom: 150px;
+    margin-top: 200px;
+}
+
+.image-defile{
+    width: 500px;
+    height: 600px;
+    border-radius: 30px;
+    border: 1rem solid;
+    border-color: #b0f2b6;
+}
+
+@media screen and (max-width:680px){
+    nav ul li{
+        margin-left: 0px;
+        position: relative;
+        width: 55px;
+    }
+
+    nav a{
+        font-size: 7px;
+    }
+
+    .deroulant>a::after {
+        content: " ▼";
+        font-size: 5px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        background-color: white;
+        margin-bottom: 50px;
+        margin-top: -180px;
+    }
+
+    .image-defile {
+        width: 250px;
+        height: 300px;
+        border-radius: 15px;
+        border: 0.5rem solid;
+        border-color: #b0f2b6;
+    }
+
+    img.active {
+        display: block;
+        animation: fade 0.8s;
+        z-index: 1;
+        width: 250px;
+        height: 300px;
+        border-radius: 15px;
+        border: 0.5rem solid;
+        border-color: #b0f2b6;
+    }
+
+    .flaura {
+        margin-left: 100px;
+        margin-top: 100px;
+        width: 200px;
+    }
+}
